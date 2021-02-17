@@ -1045,6 +1045,10 @@ function perform()
   {
     const result = json.filter(json => json.age <= age );
 
+    let ageSort = result.sort(function (a, b) {
+    return a.age - b.age;
+    })
+    
     // var table = "<table>"+"<tr>" + "<th>" + "Name" + "</th>" + "<th>" + "Gender" + "</th>"+ "<th>" + "Age" + "</th>"+"</tr>";
     // for( let i in result)
     // {
@@ -1054,7 +1058,7 @@ function perform()
     // }
     // table="</table>";
 
-    display(result);
+    display(ageSort);
 
   }else if( gender != "Select Gender" && gender !=null)
   {
